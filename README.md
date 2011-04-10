@@ -26,3 +26,7 @@ Here is basic design of applicatin
 - user are notify about jobs done and file are ready to download
 
 ![design](docs/design.png)	
+
+## Tools
+
+- [RabbitMQ managment tool](http://localhost:55672/mgmt/)
