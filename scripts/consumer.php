@@ -30,7 +30,5 @@ $application->getBootstrap()->bootstrap();
 
 $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/application.ini', APPLICATION_ENV);
 
-//Zend_Debug::dump($config);
-
 $r = new Application_Model_Rabbit($config->rabbitmq);
 $r->consumer();

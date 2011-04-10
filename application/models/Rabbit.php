@@ -79,8 +79,10 @@ class Application_Model_Rabbit
           if ($msg->body == 'quit') {
               $msg->delivery_info['channel']->basic_cancel($msg->delivery_info['consumer_tag']);
           } else {
-              echo $msg->body;
+              // make PDF
               Application_Model_Wkhtmltopdf::proceed($msg->body, APPLICATION_PATH . '/../output/');
+              // notify user
+
           }
         };
 
@@ -118,7 +120,6 @@ class Application_Model_Rabbit
                                    true,
                                    false);
         $msg = new AMQPMessage($string, array('content-type' => 'text/plain'));
-        //echo "Body:".$msg->body;
         $channel->basic_publish($msg, self::EXCHANGE);
         $channel->close();
         $conn->close();

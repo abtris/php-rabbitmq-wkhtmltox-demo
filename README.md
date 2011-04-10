@@ -25,7 +25,7 @@ Here is basic design of applicatin
 - URLs are proceed by wkhtmlpdf
 - user are notify about jobs done and file are ready to download
 
-![design](docs/design.png)
+![design](https://github.com/abtris/php-rabbitmq-wkhtmltox-demo/raw/master/docs/design.png)
 
 ## Using
 
