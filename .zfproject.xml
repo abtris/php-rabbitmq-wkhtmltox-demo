@@ -17,6 +17,7 @@
       <layoutsDirectory enabled="false"/>
       <modelsDirectory>
         <modelFile modelName="Rabbit"/>
+        <modelFile modelName="Wkhtmltopdf"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>

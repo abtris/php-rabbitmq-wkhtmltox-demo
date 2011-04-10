@@ -80,6 +80,7 @@ class Application_Model_Rabbit
               $msg->delivery_info['channel']->basic_cancel($msg->delivery_info['consumer_tag']);
           } else {
               echo $msg->body;
+              Application_Model_Wkhtmltopdf::proceed($msg->body, APPLICATION_PATH . '/../output/');
           }
         };
 
@@ -117,6 +118,7 @@ class Application_Model_Rabbit
                                    true,
                                    false);
         $msg = new AMQPMessage($string, array('content-type' => 'text/plain'));
+        //echo "Body:".$msg->body;
         $channel->basic_publish($msg, self::EXCHANGE);
         $channel->close();
         $conn->close();
@@ -127,7 +129,6 @@ class Application_Model_Rabbit
      */
     public function run()
     {
-        $this->consumer();
         foreach ($this->urls as $url) {
             $this->producer($url);
         }

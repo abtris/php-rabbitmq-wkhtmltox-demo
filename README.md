@@ -25,7 +25,13 @@ Here is basic design of applicatin
 - URLs are proceed by wkhtmlpdf
 - user are notify about jobs done and file are ready to download
 
-![design](docs/design.png)	
+![design](docs/design.png)
+
+## Using
+
+- start RabbitMQ server
+- start consumer script (scripts/consumer.php)
+- start application and proceed url
 
 ## Tools
 
