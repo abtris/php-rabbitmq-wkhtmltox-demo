@@ -17,4 +17,12 @@ For installing on Mac OS X i used [homebrew](http://mxcl.github.com/homebrew/).
 	brew install rabbitmq
 	brew install wkhtmltopdf
 	
-	
+## Design
+
+Here is basic design of applicatin
+
+- user make SET of URLs
+- URLs are proceed by wkhtmlpdf
+- user are notify about jobs done and file are ready to download
+
+![design](docs/design.png)	
