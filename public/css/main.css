@@ -1,0 +1,24 @@
+* { padding: 0; margin:0; }
+body { font-family: Helvetica, Georgia, serif; padding: 2em;  }
+.clear { clear:both; }
+
+h1 { font-size: 200%; padding:0.5em; }
+h2 { font-size: 150%; padding:0.5em 0; }
+
+form { border: 1px solid gray; padding: 0.5em; font-size: inherit;}
+form label { padding: 5px 0;}
+form input { font-size:inherit; padding: .3em 1em;}
+form select { font-size:inherit; padding: .3em 1em;}
+
+table { width: 95%; margin: 1em auto; border-collapse: collapse;}
+th { font-weigt: bold; text-align: center; padding:.5em; border: 1px solid gray; }
+td { padding:.5em; border: 1px solid gray; }
+td.child { padding-left: 3em; }
+tr.default { background: #eee; }
+
+.flash { border:1px solid #eee; font-size:inherit; padding: 1em; margin: 0.5em;
+         color: red;
+         background: yellow;
+         text-align: center;
+         font-weight:bold;
+        }
