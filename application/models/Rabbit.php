@@ -82,7 +82,7 @@ class Application_Model_Rabbit
               // make PDF
               Application_Model_Wkhtmltopdf::proceed($msg->body, APPLICATION_PATH . '/../output/');
               // notify user
-
+              system(`growlnotify -n "Rabbit demo" -m "PDF CREATED"`);
           }
         };
 
