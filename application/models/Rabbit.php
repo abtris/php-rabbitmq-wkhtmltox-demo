@@ -79,10 +79,12 @@ class Application_Model_Rabbit
           if ($msg->body == 'quit') {
               $msg->delivery_info['channel']->basic_cancel($msg->delivery_info['consumer_tag']);
           } else {
-              // make PDF
-              Application_Model_Wkhtmltopdf::proceed($msg->body, APPLICATION_PATH . '/../output/');
-              // notify user
-              system(`growlnotify -n "Rabbit demo" -m "PDF CREATED"`);
+              if (!empty($msg->body))  {
+                  // make PDF
+                  Application_Model_Wkhtmltopdf::proceed($msg->body, APPLICATION_PATH . '/../output/');
+                  // notify user
+                  system("growlnotify -n \"Rabbit demo\" -m \"PDF CREATED\"");
+              }
           }
         };
 
