@@ -11,7 +11,7 @@ class Application_Form_AddUrl extends Zend_Form
         ));
 
         $this->addElement('submit', 'process', array(
-            'label' => "Procced"
+            'label' => "Proceed"
         ));
     }
 }

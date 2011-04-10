@@ -15,7 +15,9 @@
       </controllersDirectory>
       <formsDirectory/>
       <layoutsDirectory enabled="false"/>
-      <modelsDirectory/>
+      <modelsDirectory>
+        <modelFile modelName="Rabbit"/>
+      </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
         <viewScriptsDirectory>

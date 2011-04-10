@@ -10,7 +10,19 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        $this->view->form = new Application_Form_AddUrl();
+        $r = new Application_Model_Rabbit();
+        $this->view->form = $form = new Application_Form_AddUrl();
+        // process form
+        if ($this->getRequest()->isPost()) {
+            $formData = $this->getRequest()->getParams();
+            if ($form->isValid($formData)) {
+                $r->setUrl($form->url->getValue());
+            } else {
+                $form->populate($formData);
+            }
+        }
+
+        $this->view->url = $r->getUrl();
     }
 
 
