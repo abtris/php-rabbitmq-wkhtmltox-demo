@@ -16,6 +16,8 @@ For installing on Mac OS X i used [homebrew](http://mxcl.github.com/homebrew/).
 
 	brew install rabbitmq
 	brew install wkhtmltopdf
+
+For notify using [growlnotify](http://growl.info/extras.php)
 	
 ## Design
 
