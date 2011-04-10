@@ -131,7 +131,7 @@ class Application_Model_Rabbit
     public function run()
     {
         foreach ($this->urls as $url) {
-            $this->producer($url);
+            $this->producer(trim($url));
         }
     }
 
