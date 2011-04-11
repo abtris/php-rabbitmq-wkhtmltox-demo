@@ -11,11 +11,11 @@ class Application_Model_Rabbit
     /**
      * EXCHANGE
      */
-    const EXCHANGE = 'wkhtmltox-exchange';
+    const EXCHANGE = 'pdf-exchange';
     /**
      * QUEUE
      */
-    const QUEUE = 'wkhtmltox-queue';
+    const QUEUE = 'pdf-queue';
     /**
      * CONSUMER
      */
@@ -70,7 +70,7 @@ class Application_Model_Rabbit
         /**
          * $exchange, $type,$passive=false,$durable=false,$auto_delete=true,
          */
-        $channel->exchange_declare(self::EXCHANGE, 'direct', false, true, false);
+        $channel->exchange_declare(self::EXCHANGE, 'direct', false, false, false);
         $channel->queue_declare(self::QUEUE);
         $channel->queue_bind(self::QUEUE, self::EXCHANGE);
 
