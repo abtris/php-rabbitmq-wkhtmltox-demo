@@ -41,8 +41,8 @@ Here is basic design of applicatin
 
 ## Benchmark
 
-- try only with AB
+Try test only with AB test tool
 
-	ab -n 300 -c 20 http://rabbit.dev/index/perform
+  	ab -n 300 -c 20 http://rabbit.dev/index/perform
 	
 	
