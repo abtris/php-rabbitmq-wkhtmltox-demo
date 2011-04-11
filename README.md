@@ -38,3 +38,11 @@ Here is basic design of applicatin
 ## Tools
 
 - [RabbitMQ managment tool](http://localhost:55672/mgmt/)
+
+## Benchmark
+
+- try only with AB
+
+	ab -n 300 -c 20 http://rabbit.dev/index/perform
+	
+	
