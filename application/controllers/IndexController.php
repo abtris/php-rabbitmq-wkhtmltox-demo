@@ -30,6 +30,11 @@ class IndexController extends Zend_Controller_Action
         $this->view->url = $r->getUrl();
     }
 
-
+    public function performAction()
+    {
+        $r = new Application_Model_Rabbit($this->_config->rabbitmq);
+        $r->setUrl("http://www.seznam.cz");
+        $r->run();
+    }
 }
 
